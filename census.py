@@ -41,7 +41,7 @@ class City(object):
             payload['get'] = [','.join(self.fields)]
             payload['for'] = 'place:{}'.format(self.place_id)
             payload['in'] = 'state:{}'.format(self.state_id)
-
+            print(url)
             r = requests.get(url, params=payload)
             self.json = r.json()
 
